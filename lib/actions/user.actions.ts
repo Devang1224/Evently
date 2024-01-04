@@ -67,7 +67,7 @@ export async function deleteUser(clerkId: string) {
         throw new Error('User not found')
       }
   
-    //// Unlink relationships
+    ///// Unlink relationships
       await Promise.all([
         // Update the 'events' collection to remove references to the user
         Event.updateMany(
